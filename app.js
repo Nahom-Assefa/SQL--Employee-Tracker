@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const { prompt } = require("inquirer");
 const { department, departmentQ } = require("./lib/department");
-const {roles, addRoles} = require('./lib/roles');
+const { roles, rolesQ } = require("./lib/roles");
 
 const initialQ = [
   {
@@ -21,13 +21,11 @@ const initialQ = [
 ];
 
 
-
 function init() {
   prompt(initialQ).then((ans) => {
     console.log('line 42', ans.choices);
     switch (ans.choices) {
       case "view all departments":
-        console.log(ans);
         department();
         break;
       case "view all roles":
@@ -40,7 +38,7 @@ function init() {
         departmentQ();
         break;
       case "add a role":
-        addRole();
+        rolesQ();
         break;
       case "add an employee":
         addEmployee();
