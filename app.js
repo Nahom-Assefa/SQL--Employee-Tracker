@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const { prompt } = require("inquirer");
 const { department, departmentQ } = require("./lib/department");
 const { roles, rolesQ } = require("./lib/roles");
+const { employees, employeesQ } = require("./lib/employees");
 
 const initialQ = [
   {
@@ -41,7 +42,7 @@ function init() {
         rolesQ();
         break;
       case "add an employee":
-        addEmployee();
+        employeesQ();
         break;
       case "and update an employee role":
         addUpdate();
