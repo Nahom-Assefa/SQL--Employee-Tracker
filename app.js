@@ -1,8 +1,7 @@
-const inquirer = require("inquirer");
 const { prompt } = require("inquirer");
 const { department, departmentQ } = require("./lib/department");
 const { roles, rolesQ } = require("./lib/roles");
-const { employees, employeesQ } = require("./lib/employees");
+const { employees, employeesQ, updateEmployeesQ } = require("./lib/employees");
 
 const initialQ = [
   {
@@ -16,7 +15,7 @@ const initialQ = [
       "add a department",
       "add a role",
       "add an employee",
-      "and update an employee role",
+      "update an employee role",
     ],
   },
 ];
@@ -44,11 +43,13 @@ function init() {
       case "add an employee":
         employeesQ();
         break;
-      case "and update an employee role":
-        addUpdate();
+      case "update an employee role":
+        updateEmployeesQ();
         break;
     }
   });
 }
 
 init();
+
+module.exports = {init};
