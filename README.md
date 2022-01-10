@@ -1,19 +1,22 @@
 # SQL--Employee-Tracker
 
-GIVEN a command-line application that accepts user input
-WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-WHEN I choose to view all departments
-THEN I am presented with a formatted table showing department names and department ids
-WHEN I choose to view all roles
-THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
-WHEN I choose to view all employees
-THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-WHEN I choose to add a department
-THEN I am prompted to enter the name of the department and that department is added to the database
-WHEN I choose to add a role
-THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
-WHEN I choose to add an employee
-THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
-WHEN I choose to update an employee role
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database
+**Version 1.0.0**
+
+## Description 
+The purpose of this project was to build relational tables using mysql and then query those tables given a user's requests captured through inquirer to return that data in the commandline.
+
+## Significant Changes
+Changes were made to update tables given a users input. Helper functions were used for dynamically displaying queried values. Those values were then used to find equivalent id's. Global arrays were used to store queried data within the helperFunctions.js file.
+
+## Challenges
+The biggest challenge was dynamically providing queried database in inquirer and then converting that text to the associated id for updating of the record. This was the bulk of the architectural challenge. Though it wasn't prescribed as a necessity to accomplish this project painstaking hours were spent engineering an effective way to go about this.
+
+## Credits
+This project utilized no outside research efforts outside the scope of our course to engineer a solution. All credits belong to the honor of this repository.
+
+### Github Link 
+https://github.com/Nahom-Assefa/SQL--Employee-Tracker.git
+
+
+#### License
+License and Copyright © Xander Rapstine, Trilogy Education Services/2U
